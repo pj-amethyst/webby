@@ -19,7 +19,6 @@
 }
 
 .titleContainer {
-    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -66,13 +65,22 @@ button {
     margin-top: 30px;
     width: 16rem;
     height: 3rem;
-    background-color: #C7CAE922;
+    background-color: #C7CAE911;
     border: none;
     font-size: 16px;
     color: #FFFFFF;
     font-family: Koulen;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .amethyst {
     color: #AD69CF;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
 }
