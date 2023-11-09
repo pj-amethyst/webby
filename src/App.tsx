@@ -9,7 +9,7 @@ function App() {
       <div className="right circle"></div>
       <div className="left circle"></div>
       <h2 id="motto">changing the world, one world at a time.</h2>
-      <button>Sign up for the alpha test</button>
+      <button onclick="window.open('https://forms.gle/gZ436mHMd3y9d4M98', '_blank')">Sign up for the alpha test</button>
   </div>
 }
 
