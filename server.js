@@ -43,8 +43,8 @@ async function init() {
         }
     })
 
-    ViteExpress.listen(app, 3000, () => {
-        console.log("listening on port 3000")
+    ViteExpress.listen(app, process.env.PORT ?? 3000, () => {
+        console.log("listening on port " + process.env.PORT ?? 3000)
     })
 }
 
