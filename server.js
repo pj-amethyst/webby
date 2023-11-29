@@ -4,6 +4,7 @@ import {config} from "dotenv";
 import pg from "pg";
 
 const {Pool} = pg;
+const PORT = process.env.PORT ?? 3000;
 
 config();
 const pool = new Pool({
@@ -43,8 +44,8 @@ async function init() {
         }
     })
 
-    ViteExpress.listen(app, process.env.PORT ?? 3000, () => {
-        console.log("listening on port " + process.env.PORT ?? 3000)
+    ViteExpress.listen(app, PORT, () => {
+        console.log("listening on port " +  PORT)
     })
 }
 
