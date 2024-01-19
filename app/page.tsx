@@ -1,30 +1,25 @@
 "use client";
-import prisma from "./providers/prisma";
-import { User } from "@prisma/client";
-import { useEffect, useState } from "react";
-
-async function getUsers(): Promise<User[]> {
-	prisma.user.create({
-		data: {
-			username: "floof",
-			email: "floof@floof.floof",
-			password: "floof",
-		},
-	});
-	return await prisma.user.findMany();
-}
+import { motion } from "framer-motion";
 
 export default function Home() {
-	const [users, setUsers] = useState<User[]>([]);
-	useEffect(() => {
-		getUsers().then((users) => setUsers(users));
-	}, []);
-
 	return (
-		<div>
-			{users.map((item) => {
-				return <div key={item.id}>{item.username}</div>;
-			})}
+		<div className="h-screen grid place-items-center">
+			<motion.h1
+				animate={{
+					scale: 1,
+				}}
+				initial={{
+					scale: 0,
+				}}
+				transition={{
+					duration: 3,
+					ease: "easeOut",
+				}}
+				className="text-4xl"
+			>
+				<span className="text-fuchsia-500">project</span>
+				amethyst
+			</motion.h1>
 		</div>
 	);
 }
