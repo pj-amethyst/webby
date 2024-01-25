@@ -17,8 +17,7 @@ export default function Home() {
 				}}
 				className="text-4xl"
 			>
-				<span className="text-fuchsia-500">project</span>
-				amethyst
+				im going crazy {"<"}3
 			</motion.h1>
 		</div>
 	);
